@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz com Abas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tabs">
+        <button class="tablinks" onclick="openTab(event, 'Aba1')">Aba 1</button>
+        <button class="tablinks" onclick="openTab(event, 'Aba2')">Aba 2</button>
+        <button class="tablinks" onclick="openTab(event, 'Aba3')">Aba 3</button>
+        <button class="tablinks" onclick="openTab(event, 'Aba4')">Aba 4</button>
+        <button class="tablinks" onclick="openTab(event, 'Aba5')">Aba 5</button>
+        <button class="tablinks" onclick="openTab(event, 'Aba6')">Aba 6</button>
+        <button class="tablinks" onclick="openTab(event, 'Aba7')">Aba 7</button>
+        <button class="tablinks" onclick="openTab(event, 'Aba8')">Aba 8</button>
+    </div>
+
+    <div id="Aba1" class="tabcontent">
+        <h3>Quiz 1</h3>
+        <p class="question">Qual é o maior planeta do nosso sistema solar?</p>
+        <input type="text" id="resposta1" class="input-field">
+        <button class="send-button" onclick="checkAnswer('resposta1', 'Júpiter', 'feedback1', 'Aba2')">Enviar</button>
+        <p id="feedback1" class="feedback">Resposta errada! Tente novamente.</p>
+    </div>
+
+    <div id="Aba2" class="tabcontent">
+        <h3>Quiz 2</h3>
+        <p class="question">Qual é a capital da Espanha?</p>
+        <input type="text" id="resposta2" class="input-field">
+        <button class="send-button" onclick="checkAnswer('resposta2', 'Madrid', 'feedback2', 'Aba3')">Enviar</button>
+        <p id="feedback2" class="feedback">Resposta errada! Tente novamente.</p>
+    </div>
+
+    <div id="Aba3" class="tabcontent">
+        <h3>Quiz 3</h3>
+        <p class="question">Quem pintou a Mona Lisa?</p>
+        <input type="text" id="resposta3" class="input-field">
+        <button class="send-button" onclick="checkAnswer('resposta3', 'Leonardo da Vinci', 'feedback3', 'Aba4')">Enviar</button>
+        <p id="feedback3" class="feedback">Resposta errada! Tente novamente.</p>
+    </div>
+
+    <div id="Aba4" class="tabcontent">
+        <h3>Quiz 4</h3>
+        <p class="question">Qual é o planeta mais próximo do Sol?</p>
+        <input type="text" id="resposta4" class="input-field">
+        <button class="send-button" onclick="checkAnswer('resposta4', 'Mercúrio', 'feedback4', 'Aba5')">Enviar</button>
+        <p id="feedback4" class="feedback">Resposta errada! Tente novamente.</p>
+    </div>
+
+    <div id="Aba5" class="tabcontent">
+        <h3>Quiz 5</h3>
+        <p class="question">Qual dos seguintes tipos de rochas é formado através do resfriamento e solidificação de magma ou lava?</p>
+        <button class="option-button" onclick="checkAnswerOption(this, 'Rochas ígneas', 'feedback5', 'Aba6')">Rochas sedimentares</button>
+        <button class="option-button" onclick="checkAnswerOption(this, 'Rochas ígneas', 'feedback5', 'Aba6')">Rochas metamórficas</button>
+        <button class="option-button" onclick="checkAnswerOption(this, 'Rochas ígneas', 'feedback5', 'Aba6')">Rochas ígneas</button>
+        <button class="option-button" onclick="checkAnswerOption(this, 'Rochas ígneas', 'feedback5', 'Aba6')">Rochas carbonáticas</button>
+        <p id="feedback5" class="feedback">Resposta errada! Tente novamente.</p>
+    </div>
+
+    <div id="Aba6" class="tabcontent">
+        <h3>Quiz 6</h3>
+        <p class="question">Qual é o maior oceano do mundo?</p>
+        <button class="option-button" onclick="checkAnswerOption(this, 'Oceano Pacífico', 'feedback6', 'Aba7')">Oceano Índico</button>
+        <button class="option-button" onclick="checkAnswerOption(this, 'Oceano Pacífico', 'feedback6', 'Aba7')">Oceano Atlântico</button>
+        <button class="option-button" onclick="checkAnswerOption(this, 'Oceano Pacífico', 'feedback6', 'Aba7')">Oceano Pacífico</button>
+        <button class="option-button" onclick="checkAnswerOption(this, 'Oceano Pacífico', 'feedback6', 'Aba7')">Oceano Ártico</button>
+        <p id="feedback6" class="feedback">Resposta errada! Tente novamente.</p>
+    </div>
+
+    <div id="Aba7" class="tabcontent">
+        <h3>Quiz 7</h3>
+        <p class="question">Qual é o país mais populoso do mundo?</p>
+        <button class="option-button" onclick="checkAnswerOption(this, 'China', 'feedback7', 'Aba8')">China</button>
+        <button class="option-button" onclick="checkAnswerOption(this, 'China', 'feedback7', 'Aba8')">Brasil</button>
+        <button class="option-button" onclick="checkAnswerOption(this, 'China', 'feedback7', 'Aba8')">Alemanha</button>
+        <button class="option-button" onclick="checkAnswerOption(this, 'China', 'feedback7', 'Aba8')">Argentina</button>
+        <p id="feedback7" class="feedback">Resposta errada! Tente novamente.</p>
+    </div>
+
+    <div id="Aba8" class="tabcontent">
+        <h3>Quiz 8</h3>
+        <p class="question">Quem pintou "A Noite Estrelada"?</p>
+        <button class="option-button" onclick="checkAnswerOption(this, 'Vincent van Gogh', 'feedback8', 'winMessage')">Gustav Klimt</button>
+        <button class="option-button" onclick="checkAnswerOption(this, 'Vincent van Gogh', 'feedback8', 'winMessage')">Michelangelo Buonarroti</button>
+        <button class="option-button" onclick="checkAnswerOption(this, 'Vincent van Gogh', 'feedback8', 'winMessage')">Leonardo da Vinci</button>
+        <button class="option-button" onclick="checkAnswerOption(this, 'Vincent van Gogh', 'feedback8', 'winMessage')">Vincent van Gogh</button>
+        <p id="feedback8" class="feedback">Resposta errada! Tente novamente.</p>
+    </div>
+
+    <div id="winMessage">
+        Parabéns! Você completou o quiz.
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.tabs {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+.tabs button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    flex: 1;
+}
+
+.tabs button:hover {
+    background-color: #ddd;
+}
+
+.tabs button.active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+    height: calc(100vh - 50px);
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+.feedback {
+    display: none;
+    color: red;
+}
+
+.feedback.correct {
+    color: rgb(59, 163, 59);
+}
+
+.question {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.send-button, .option-button {
+    background: linear-gradient(to right, #bfcbc0, #011001);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px 0 rgba(11, 11, 11, 0.2);
+}
+
+.send-button:hover, .option-button:hover {
+    background: linear-gradient(to right, #47974b, #4CAF50);
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.input-field {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.input-field:focus {
+    border-color: #071708;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.tabs button:nth-child(1), #Aba1 {
+    background: linear-gradient(to bottom, #181515, #ff6666);
+}
+.tabs button:nth-child(2), #Aba2 {
+    background: linear-gradient(to bottom, #0e160e, #66ff66);
+}
+.tabs button:nth-child(3), #Aba3 {
+    background: linear-gradient(to bottom, #0e0e11, #6666ff);
+}
+.tabs button:nth-child(4), #Aba4 {
+    background: linear-gradient(to bottom, #0b0b0b, #ffff66);
+}
+.tabs button:nth-child(5), #Aba5 {
+    background: linear-gradient(to bottom, #0e0b0e, #ff66ff);
+}
+.tabs button:nth-child(6), #Aba6 {
+    background: linear-gradient(to bottom, #050606, #66ffff);
+}
+.tabs button:nth-child(7), #Aba7 {
+    background: linear-gradient(to bottom, #121110, #ffb366);
+}
+.tabs button:nth-child(8), #Aba8 {
+    background: linear-gradient(to bottom, #100f11, #b366ff);
+}
+
+#winMessage {
+    display: none;
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+}
